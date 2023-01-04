@@ -5,7 +5,7 @@ terraform {
       version = "~> 4.16"
     }
   }
-
+  # Github web is awesome
   required_version = ">= 1.2.0"
 }
 
