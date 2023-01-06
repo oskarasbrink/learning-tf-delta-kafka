@@ -22,6 +22,7 @@ resource "aws_instance" "ec2_instance" {
   # https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html#finding-quick-start-ami
   ami           = var.ami
   instance_type = var.instance_type
+  iam_instance_profile = aws_iam_instance_profile.prototype-profile.name
 
   tags = {
     Name = "ExampleAppServerInstance"
