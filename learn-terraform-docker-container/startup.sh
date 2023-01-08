@@ -17,8 +17,10 @@ sudo yum install git -y
 mkdir GIT && cd GIT
 git clone https://github.com/oskarasbrink/learning-tf-delta-kafka.git
 
+
 ls learning-tf-delta-kafka
 cd learning-tf-delta-kafka
+git checkout what-the-hell
 pwd
 cd ../..
 #install docker
