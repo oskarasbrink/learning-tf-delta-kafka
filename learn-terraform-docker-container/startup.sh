@@ -30,7 +30,7 @@ sudo service docker status
 
 #build
 mkdir cred
-cat aws-credentials > /root/cred/credentials.txt
+cat aws-credentials > credentials.txt
 echo "yeah man"
 cat /home/ec2-user/credentials.txt
 cd GIT/learning-tf-delta-kafka
