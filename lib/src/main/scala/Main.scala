@@ -1,7 +1,8 @@
 import scala.collection.immutable._
 object Main extends App {
   def getCredentials(): List[String] = {
-    val filename = "/root/cred/aws_credentials.txt"
+    val filename = "/root/cred/credentials.txt"
+    println("lets gooo")
     val lines = scala.io.Source.fromFile(filename).getLines.toList
     val pub_key : String = lines(1).split(" ").last
     val priv_key : String = lines(2).split(" ").last
