@@ -44,7 +44,7 @@ resource "aws_instance" "ec2_instance" {
     destination = "/home/ec2-user/docker-start.sh"
   }
   provisioner "file" {
-    source      = "cred/aws-credentials"
+    source      = "credentials/aws-credentials"
     destination = "/home/ec2-user/cred/aws-credentials.txt"
   }
   
