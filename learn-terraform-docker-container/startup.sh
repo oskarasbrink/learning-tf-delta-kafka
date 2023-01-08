@@ -32,7 +32,7 @@ sudo service docker status
 mkdir cred
 cat aws-credentials > /root/cred/credentials.txt
 echo "yeah man"
-echo /root/cred/credentials.txt
+cat /home/ec2-user/credentials.txt
 cd GIT/learning-tf-delta-kafka
 sudo docker build -t spark3x-delta .
 
