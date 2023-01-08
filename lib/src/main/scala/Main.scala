@@ -13,7 +13,7 @@ object Main extends App {
   import io.delta.tables.DeltaTable
   val tokens: List[String] = getCredentials()
 
-  val spark = SparkSession
+  val spark = SparkSession jashdfljsahdlfjksdhfkj
       .builder()
       .appName("Utilities")
       .master("local[*]")
