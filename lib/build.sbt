@@ -47,6 +47,8 @@ libraryDependencies += "org.apache.spark" %% "spark-core" % "3.3.1"
 
 libraryDependencies += "org.apache.spark" %% "spark-sql" % "3.3.1"
 
+scalacOptions += "-deprecation"
+
 // addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.14.5")
 
 // Here, `libraryDependencies` is a set of dependencies, and by using `+=`,
