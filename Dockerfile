@@ -97,4 +97,4 @@ RUN gpg --batch --generate-key < gpgBatch.txt
 # Cleanup
 RUN apt clean
 
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/bin/bash", "-l", "-c"]

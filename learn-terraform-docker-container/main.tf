@@ -31,13 +31,19 @@ resource "aws_instance" "ec2_instance" {
   # file provisioner - 
   # It will copy the "startup.sh" to remote machine
   provisioner "file" {
+    source      = "credentials/gh-ssh.pem"
+    destination = "/home/ec2-user/cred/gh-ssh.pem"
+  }
+
+  provisioner "file" {
     source      = "startup.sh"
     destination = "/home/ec2-user/startup.sh"
   }
   provisioner "file" {
-    source      = "startup2.sh"
-    destination = "/home/ec2-user/startup2.sh"
+    source      = "docker-start.sh"
+    destination = "/home/ec2-user/docker-start.sh"
   }
+  
   
 # connection -
   # This block will be used for ssh connection to initiate the copy
@@ -47,11 +53,12 @@ resource "aws_instance" "ec2_instance" {
       agent       = true
       user        = "ec2-user"
       private_key = file("~/.ssh/best_key_again.pem")
-      timeout     = "4m"
+      timeout     = "10m"
    }
    provisioner "remote-exec" {
   inline = [
     "chmod +x /home/ec2-user/startup.sh",
+    "chmod +x /home/ec2-user/docker-start.sh",
     "/home/ec2-user/startup.sh"
   ]
   }
