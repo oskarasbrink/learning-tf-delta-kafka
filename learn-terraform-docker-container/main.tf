@@ -25,6 +25,10 @@ resource "aws_instance" "ec2_instance" {
   iam_instance_profile = aws_iam_instance_profile.prototype-profile.name
   vpc_security_group_ids = [aws_security_group.main.id]
   key_name = "best_key_again"
+  root_block_device {
+    #device_name = "/dev/xvda"
+    volume_size = 32
+  }
   tags = {
     Name = "ExampleAppServerInstance"
   }
